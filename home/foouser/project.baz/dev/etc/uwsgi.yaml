@@ -1,0 +1,24 @@
+uwsgi:
+	socket: /var/tmp/project.baz-uwsgi.sock
+
+	chdir:		/home/foouser/project.baz/dev/project_baz/
+	home:		/home/foouser/project.baz/dev/env3.5/
+	virtualenv:	/home/foouser/project.baz/dev/env3.5/
+	pythonpath:	/home/foouser/project.baz/dev/env3.5/bin/
+
+	module: project_baz.wsgi:application
+	env: DJANGO_SETTINGS_MODULE=project_baz.settings
+
+	daemonize: /home/foouser/project.baz/dev/logs/uwsgi.log
+	
+	max-requests: 5000
+	buffer-size: 65535
+	harakiri: 30
+	reload-mercy: 8
+	master: 1
+	no-orphans: 1
+	post-buffering: 65535
+	memory-report: 1
+	enable-threads: 1
+
+	touch-reload: /home/foouser/project.baz/dev/etc/uwsgi.yaml
