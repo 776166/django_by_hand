@@ -19,6 +19,7 @@
 https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa
 
 `sudo add-apt-repository ppa:deadsnakes/ppa
+
 sudo apt-get update`
 
 Установка питона версии 3.5 делается как
@@ -33,10 +34,15 @@ virtualenv/pip и прочие запчасти оставляю на ваше �
 3) Certbot (https://certbot.eff.org/). Необходим для выписывания и обновления ssl-сертификатов.
 
 `sudo apt-get update
+
 sudo apt-get install software-properties-common
+
 sudo add-apt-repository universe
+
 sudo add-apt-repository ppa:certbot/certbot
+
 sudo apt-get update
+
 sudo apt-get install certbot python-certbot-nginx`
 
 Для его работы необходимо настроить
